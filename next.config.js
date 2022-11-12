@@ -11,7 +11,7 @@ module.exports = {
   },
   env: {
     // declare here all your variables
-    scheme: process.env.REACT_APP_SERVER_SCHEME,
-    host: process.env.REACT_APP_SERVER_HOST,
+    scheme: process.env.REACT_APP_BACKEND_SERVER_SCHEME,
+    host: process.env.REACT_APP_BACKEND_SERVER_HOST,
   },
 }
