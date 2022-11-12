@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// tailwind.scss
+// tooltip
+
+// design system component
+@import './components/typography.scss';
+@import './components/buttons.scss';
+@import './components/input.scss';
+@import './components/checkbox.scss';
+@import './components/radio.scss';
+@import './components/toggle.scss';
+@import './components/balloon.scss';
+@import './components/badges.scss';
+@import './components/select.scss';
+@import './components/dropdown.scss';
+@import './components/loader.scss';

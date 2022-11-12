@@ -1,0 +1,51 @@
+// Font Size: 72px | Line Height: 82px | Letter Spacing: -1.5px
+.display-1 {
+  @apply text-7xl font-bold tracking-wide;
+}
+
+// Font Size: 60px | Line Height: 70px | Letter Spacing: -0.5px
+.display-2 {
+  @apply text-6xl font-bold tracking-normal;
+  @apply sm:text-2xl md:text-3xl lg:text-5xl;
+}
+
+// Font Size: 48px | Line Height: 60px
+h1,
+.h1 {
+  @apply text-5xl font-bold;
+  @apply sm:text-2xl md:text-3xl lg:text-4xl;
+}
+
+// Font Size: 40px | Line Height: 52px
+h2,
+.h2 {
+  @apply text-4xl font-bold;
+  @apply sm:text-xl md:text-2xl lg:text-3xl;
+}
+
+// Font Size: 32px | Line Height: 42px
+h3,
+.h3 {
+  @apply text-3xl font-bold;
+  @apply sm:text-xl md:text-2xl lg:text-3xl;
+}
+
+// Font Size: 24px | Line Height: 32px
+h4,
+.h4 {
+  @apply text-2xl font-bold;
+  @apply sm:text-xl md:text-xl lg:text-xl;
+}
+
+// Font Size: 20px | Line Height: 28px
+h5,
+.h5 {
+  @apply text-xl font-bold;
+  @apply sm:text-base md:text-lg;
+}
+
+// Font Size: 16px | Line Height: 24px
+h6,
+.h6 {
+  @apply text-base font-bold;
+}

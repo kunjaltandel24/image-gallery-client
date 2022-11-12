@@ -1,0 +1,102 @@
+.form-radio {
+  @apply appearance-none p-0 inline-block align-middle select-none flex-shrink-0 cursor-pointer;
+  @apply h-4 w-4 bg-white border border-gray-100 rounded-full;
+
+  &:focus {
+    @apply outline-none;
+  }
+
+  &:checked {
+    animation: radiomark 0.22s  ease-in-out;
+  }
+
+  &:disabled, &.disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+
+  &.error {
+    @apply border-red-500;
+  }
+
+  &-explore {
+    &:hover {
+      @apply border-gray-50;
+      box-shadow: 0px 0px 0px 2px #f7f7f7;
+    }
+
+    &:focus {
+      @apply border-gray-200;
+      box-shadow: 0px 0px 0px 2px #d1d1d1;
+    }
+
+    &:checked {
+      @apply bg-black;
+
+      &:hover, &:focus {
+        @apply bg-black;
+      }
+    }
+  }
+
+  &-buidl {
+    &:hover {
+      @apply border-orange-50;
+      box-shadow: 0px 0px 0px 2px #FDF4F2;
+    }
+
+    &:focus {
+      @apply border-orange-100;
+      box-shadow: 0px 0px 0px 2px #F9E2DC;
+    }
+
+    &:checked {
+      @apply bg-orange-500;
+
+      &:hover, &:focus {
+        @apply bg-orange-500;
+      }
+    }
+  }
+
+  &-invest {
+    &:hover {
+      @apply border-purple-50;
+      box-shadow: 0px 0px 0px 2px #F4F3FC;
+    }
+
+    &:focus {
+      @apply border-purple-100;
+      box-shadow: 0px 0px 0px 2px #E0DFF6;
+    }
+
+    &:checked {
+      @apply bg-purple-600;
+
+      &:hover, &:focus {
+        @apply bg-purple-600;
+      }
+    }
+  }
+}
+
+.radio-label {
+  @apply cursor-pointer select-none inline-flex items-center;
+
+  > span {
+    @apply text-xs text-black select-none px-[6px];
+  }
+}
+
+
+@keyframes radiomark {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1px);
+  }
+  100% {
+    transform: scale(3px);
+  }
+}

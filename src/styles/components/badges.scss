@@ -1,0 +1,65 @@
+.badge {
+  @apply inline-block bg-transparent whitespace-normal select-none border border-solid border-transparent;
+  @apply text-xs font-semibold rounded align-middle text-center text-black;
+  padding: 1px 8px;
+
+  &:focus-visible {
+    box-shadow: 0px 0px 0px 3px rgba(184, 184, 184, 0.5);
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  &-default {
+    @apply bg-gray-100 border-gray-100 text-black;
+  }
+
+  &-black {
+    @apply bg-black border-black text-white;
+  }
+
+  &-orange {
+    @apply bg-orange-500 border-orange-500 text-white;
+  }
+
+  &-purple {
+    @apply bg-purple-600 border-purple-600 text-white;
+  }
+
+  &-red {
+    @apply bg-red-500 border-red-500 text-white;
+  }
+
+  &-yellow {
+    @apply bg-yellow-500 border-yellow-500 text-black;
+  }
+
+  &-green {
+    @apply bg-green-500 border-green-500 text-white;
+  }
+
+  &-outline-black {
+    @apply bg-gray-50 border-black text-black;
+  }
+
+  &-outline-orange {
+    @apply bg-orange-100 border-orange-500 text-orange-600;
+  }
+
+  &-outline-purple {
+    @apply bg-purple-100 border-purple-600 text-purple-700;
+  }
+
+  &-outline-red {
+    @apply bg-red-100 border-red-500 text-red-600;
+  }
+
+  &-outline-yellow {
+    @apply bg-yellow-100 border-yellow-500 text-yellow-800;
+  }
+
+  &-outline-green {
+    @apply bg-green-100 border-green-500 text-green-600;
+  }
+}

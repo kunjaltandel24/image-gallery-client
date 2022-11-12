@@ -1,0 +1,84 @@
+.dropdown {
+  @apply relative whitespace-nowrap;
+
+  .dropdown-btn {
+    @apply bg-white border border-gray-100 text-base leading-6 rounded-lg hover:border-gray-200;
+    padding: 10px 72px 10px 16px;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE2Ljk5OTkgOS4xNjk5NEMxNi44MTI2IDguOTgzNjkgMTYuNTU5MSA4Ljg3OTE1IDE2LjI5NDkgOC44NzkxNUMxNi4wMzA4IDguODc5MTUgMTUuNzc3MyA4Ljk4MzY5IDE1LjU4OTkgOS4xNjk5NEwxMS45OTk5IDEyLjcwOTlMOC40NTk5NSA5LjE2OTk0QzguMjcyNTkgOC45ODM2OSA4LjAxOTEzIDguODc5MTUgNy43NTQ5NSA4Ljg3OTE1QzcuNDkwNzYgOC44NzkxNSA3LjIzNzMxIDguOTgzNjkgNy4wNDk5NSA5LjE2OTk0QzYuOTU2MjIgOS4yNjI5MSA2Ljg4MTgzIDkuMzczNTEgNi44MzEwNiA5LjQ5NTM3QzYuNzgwMjkgOS42MTcyMyA2Ljc1NDE1IDkuNzQ3OTMgNi43NTQxNSA5Ljg3OTk0QzYuNzU0MTUgMTAuMDEyIDYuNzgwMjkgMTAuMTQyNyA2LjgzMTA2IDEwLjI2NDVDNi44ODE4MyAxMC4zODY0IDYuOTU2MjIgMTAuNDk3IDcuMDQ5OTUgMTAuNTg5OUwxMS4yODk5IDE0LjgyOTlDMTEuMzgyOSAxNC45MjM3IDExLjQ5MzUgMTQuOTk4MSAxMS42MTU0IDE1LjA0ODhDMTEuNzM3MiAxNS4wOTk2IDExLjg2NzkgMTUuMTI1NyAxMS45OTk5IDE1LjEyNTdDMTIuMTMyIDE1LjEyNTcgMTIuMjYyNyAxNS4wOTk2IDEyLjM4NDUgMTUuMDQ4OEMxMi41MDY0IDE0Ljk5ODEgMTIuNjE3IDE0LjkyMzcgMTIuNzA5OSAxNC44Mjk5TDE2Ljk5OTkgMTAuNTg5OUMxNy4wOTM3IDEwLjQ5NyAxNy4xNjgxIDEwLjM4NjQgMTcuMjE4OCAxMC4yNjQ1QzE3LjI2OTYgMTAuMTQyNyAxNy4yOTU3IDEwLjAxMiAxNy4yOTU3IDkuODc5OTRDMTcuMjk1NyA5Ljc0NzkzIDE3LjI2OTYgOS42MTcyMyAxNy4yMTg4IDkuNDk1MzdDMTcuMTY4MSA5LjM3MzUxIDE3LjA5MzcgOS4yNjI5MSAxNi45OTk5IDkuMTY5OTRaIiBmaWxsPSJibGFjayIvPgo8L3N2Zz4K");
+    background-position: right 0.8rem center;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    print-color-adjust: exact;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0px 0px 0px 2px #d1d1d1;
+    }
+
+    &-explore {
+      @apply hover:border-black focus:border-black;
+
+      &:focus {
+        box-shadow: 0px 0px 0px 2px #d1d1d1;
+      }
+    }
+
+    &-buidl {
+      @apply hover:border-orange-500 focus:border-orange-500;
+
+      &:focus {
+        box-shadow: 0px 0px 0px 2px #f1bfb1;
+      }
+    }
+
+    &-invest {
+      @apply hover:border-purple-600 focus:border-purple-600;
+
+      &:focus {
+        box-shadow: 0px 0px 0px 2px #bab6ec;
+      }
+    }
+
+    &:disabled,
+    &.disabled {
+      @apply bg-gray-50 pointer-events-none focus:shadow-none focus:border-transparent;
+    }
+
+    &.error {
+      @apply border-red-500 text-red-500;
+
+      &:hover {
+        @apply border-red-500;
+      }
+
+      &:focus {
+        @apply border-red-500;
+        box-shadow: 0px 0px 0px 2px #faaea8;
+      }
+    }
+  }
+
+  // none by default, but block on "open" of the menu
+  .dropdown-menu {
+    min-width: 224px;
+    @apply absolute top-full left-0 z-40 float-left text-sm text-black text-left list-none;
+    @apply bg-white bg-clip-padding border border-gray-100 rounded-lg shadow-sm mt-1;
+
+    .dropdown-item {
+      @apply block w-full clear-both text-sm font-normal text-black whitespace-nowrap bg-transparent border-0;
+      @apply px-4 py-2 hover:bg-gray-50 hover:text-black focus:outline-none focus:text-black focus:bg-gray-50;
+
+      &-explore {
+        @apply hover:bg-black hover:text-white focus:outline-none focus:text-white focus:bg-black;
+      }
+
+      &-buidl {
+        @apply hover:bg-orange-500 hover:text-white focus:outline-none focus:text-white focus:bg-orange-500;
+      }
+
+      &-invest {
+        @apply hover:bg-purple-600 hover:text-white focus:outline-none focus:text-white focus:bg-purple-600;
+      }
+    }
+  }
+}

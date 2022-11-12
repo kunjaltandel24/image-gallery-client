@@ -1,0 +1,167 @@
+.btn {
+  @apply inline-block select-none whitespace-normal border border-solid border-transparent bg-transparent;
+  @apply rounded-lg text-center align-middle text-base font-semibold leading-6 text-black;
+  padding: 9px 18px;
+  transition: all 0.17s ease-in-out;
+  will-change: transform;
+  @apply sm:rounded-md sm:py-1.5 sm:px-4 sm:text-sm sm:leading-5 md:rounded-md md:py-1.5 md:px-4 md:text-sm md:leading-5;
+
+  &:active:focus {
+    outline: 0;
+    transform: scale(0.96);
+  }
+
+  &:focus-visible {
+    box-shadow: 0px 0px 0px 3px rgba(184, 184, 184, 0.5);
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:disabled,
+  &.disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+
+  &-black {
+    @apply border-black bg-black text-white;
+
+    &:hover {
+      @apply border-gray-700 bg-gray-700 text-white;
+    }
+
+    &:focus-visible {
+      box-shadow: 0px 0px 0px 3px rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  &-orange {
+    @apply border-orange-500 bg-orange-500 text-white;
+
+    &:hover {
+      @apply border-orange-600 bg-orange-600 text-white;
+    }
+
+    &:focus-visible {
+      box-shadow: 0px 0px 0px 3px rgba(218, 85, 47, 0.5);
+    }
+  }
+
+  &-purple {
+    @apply border-purple-600 bg-purple-600 text-white;
+
+    &:hover {
+      @apply border-purple-700 bg-purple-700 text-white;
+    }
+
+    &:focus-visible {
+      box-shadow: 0px 0px 0px 3px rgba(54, 45, 169, 0.5);
+    }
+  }
+
+  &-green {
+    @apply border-green-500 bg-green-500 text-white;
+
+    &:hover {
+      @apply border-green-600 bg-green-600 text-white;
+    }
+
+    &:focus-visible {
+      box-shadow: 0px 0px 0px 3px rgba(84, 181, 88, 0.5);
+    }
+  }
+
+  &-yellow {
+    @apply border-yellow-500 bg-yellow-500 text-black;
+
+    &:hover {
+      @apply border-yellow-600 bg-yellow-600 text-black;
+    }
+
+    &:focus-visible {
+      box-shadow: 0px 0px 0px 3px rgba(253, 208, 13, 0.5);
+    }
+  }
+
+  &-red {
+    @apply border-red-500 bg-red-500 text-white;
+
+    &:hover {
+      @apply border-red-600 bg-red-600 text-white;
+    }
+
+    &:focus-visible {
+      box-shadow: 0px 0px 0px 3px rgba(242, 38, 23, 0.5);
+    }
+  }
+
+  &-gray {
+    @apply border-gray-50 bg-gray-50 text-black;
+
+    &:hover {
+      @apply border-gray-100 bg-gray-100 text-black;
+    }
+
+    &:focus-visible {
+      box-shadow: 0px 0px 0px 3px rgba(184, 184, 184, 0.5);
+    }
+  }
+
+  &-outline-black {
+    @apply border-black text-black;
+
+    &:hover {
+      @apply border-black bg-black text-white;
+    }
+
+    &:focus-visible {
+      box-shadow: 0px 0px 0px 3px rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  &-outline-orange {
+    @apply border-orange-500 text-orange-500;
+
+    &:hover {
+      @apply border-orange-500 bg-orange-500 text-white;
+    }
+
+    &:focus-visible {
+      box-shadow: 0px 0px 0px 3px rgba(218, 85, 47, 0.5);
+    }
+  }
+
+  &-outline-purple {
+    @apply border-purple-500 text-purple-500;
+
+    &:hover {
+      @apply border-purple-500 bg-purple-500 text-white;
+    }
+
+    &:focus-visible {
+      box-shadow: 0px 0px 0px 3px rgba(54, 45, 169, 0.5);
+    }
+  }
+
+  &-default {
+    @apply border-gray-100 bg-white text-black;
+
+    &:hover {
+      @apply border-gray-300 bg-white text-black;
+    }
+  }
+
+  &-sm {
+    padding: 6px 16px;
+    @apply rounded-md text-sm leading-5;
+  }
+
+  &-lg {
+    padding: 13px 22px;
+    @apply rounded-lg text-lg leading-7;
+
+    @apply sm:py-2 sm:px-[18px] sm:text-base md:py-2 md:px-[18px] md:text-base;
+  }
+}

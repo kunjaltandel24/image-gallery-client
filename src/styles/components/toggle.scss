@@ -1,0 +1,98 @@
+.form-toggle {
+  @apply relative w-9 h-5 rounded-xl bg-gray-100 appearance-none p-0 inline-block select-none cursor-pointer;
+  transition: background-color 0.25s ease-in-out;
+  will-change: background;
+
+  &:focus {
+    @apply outline-none;
+  }
+
+  &:disabled, &.disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+
+  &:after {
+    @apply w-4 h-4 block bg-white absolute rounded-lg;
+    top: 2px;
+    left: 2px;
+    content: '';
+    transition: 0.22s margin-left;
+  }
+
+  &:checked {
+    &:after {
+      background: white;
+      margin-left: calc(100% - 20px);
+    }
+  }
+
+  &-explore {
+    &:hover {
+      @apply border-gray-50;
+      box-shadow: 0px 0px 0px 2px #f7f7f7;
+    }
+
+    &:focus {
+      @apply border-gray-200;
+      box-shadow: 0px 0px 0px 2px #d1d1d1;
+    }
+
+    &:checked, &:indeterminate {
+      @apply bg-black;
+
+      &:hover, &:focus {
+        @apply bg-black;
+      }
+    }
+  }
+
+  &-buidl {
+    &:hover {
+      @apply border-orange-50;
+      box-shadow: 0px 0px 0px 2px #FDF4F2;
+    }
+
+    &:focus {
+      @apply border-orange-100;
+      box-shadow: 0px 0px 0px 2px #F9E2DC;
+    }
+
+    &:checked, &:indeterminate {
+      @apply bg-orange-500;
+
+      &:hover, &:focus {
+        @apply bg-orange-500;
+      }
+    }
+  }
+
+  &-invest {
+    &:hover {
+      @apply border-purple-50;
+      box-shadow: 0px 0px 0px 2px #F4F3FC;
+    }
+
+    &:focus {
+      @apply border-purple-100;
+      box-shadow: 0px 0px 0px 2px #E0DFF6;
+    }
+
+    &:checked, &:indeterminate {
+      @apply bg-purple-600;
+
+      &:hover, &:focus {
+        @apply bg-purple-600;
+      }
+    }
+  }
+}
+
+.toggle-label {
+  @apply cursor-pointer select-none inline-flex items-center;
+
+  > span {
+    @apply text-sm text-black select-none;
+    padding-right: 6px;
+  }
+}
