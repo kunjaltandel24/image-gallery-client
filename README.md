@@ -1,4 +1,4 @@
-# The Dapp List Explore
+# Image Gallery Client
 
 ### Setup
 ```
